@@ -10,13 +10,27 @@
         {{ genero | i18nSelect: invitacionMapa }}
         a nuestro evento.
       </p>
-      <button>Cambiar persona</button>
+      <button
+        title="Cambiar Usuario"
+        (click)="cambiarCliente()"
+        pButton
+        type="button"
+        label="Cambiar Usuario"
+        class="p-button-help"
+      ></button>
     </p-fieldset>
   </div>
   <div class="col md:col-6">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
       <p>Actualmente {{ clientes.length | i18nPlural: clientesMapa }}</p>
-      <button>Borrar cliente</button>
+      <button
+        title="Borrar Cliente"
+        (click)="borrarCliente()"
+        pButton
+        type="button"
+        label="Borrar Usuario"
+        class="p-button-danger"
+      ></button>
     </p-fieldset>
   </div>
 </div>

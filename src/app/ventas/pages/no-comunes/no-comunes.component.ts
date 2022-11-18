@@ -25,4 +25,12 @@ export class NoComunesComponent {
     'other': 'tenemos # clientes esperando'
   }
 
+  cambiarCliente(){
+    this.nombre = 'Hugo'
+    this.genero = 'masculino'
+  }
+
+  borrarCliente(){
+    this.clientes.shift()
+  }
 }
